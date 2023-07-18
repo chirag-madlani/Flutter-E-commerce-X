@@ -103,6 +103,9 @@ flutter:
   assets:
     - assets/Img/
     - assets/Logo/
+    - assets/images/product/
+    - assets/details.json
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,5 +1,9 @@
+import 'dart:convert';
+
 import 'package:dio/dio.dart';
+import 'package:flutter/services.dart' ;
 import 'package:flutter_application_ecommerce/Model/Tools/JsonParse/product_parse.dart';
+import 'package:get/get.dart';
 
 abstract class HomeDataSource {
   Future<List<ProductEntity>> getProducts();
@@ -13,22 +17,23 @@ class HomeRemoteDataSource implements HomeDataSource {
   HomeRemoteDataSource({required this.httpClient});
   @override
   Future<List<ProductEntity>> getProducts() async {
-    final response = await httpClient.get(
-        "https://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl");
-    final List<ProductEntity> productList = [];
-    for (var product in (response.data) as List) {
+    //final response = await httpClient.get("https://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl");
+   final response = await rootBundle.loadString('assets/details.json');
+   final data= json.decode(response) ;
+   final List<ProductEntity> productList = [];
+     for (var product in (data) as List) {
       productList.add(ProductEntity.fromJson(product));
-    }
+     }
     return productList;
   }
 
   @override
   Future<List<ProductEntity>> getProductsWithKeyWord(
       {required String keyWord}) async {
-    final response = await httpClient.get(
-        "https://makeup-api.herokuapp.com/api/v1/products.json?brand=$keyWord");
+
+    final response = await rootBundle.loadString('assets/details.json');
     final List<ProductEntity> productList = [];
-    final data=(response.data)as List;
+    final data=json.decode(response);
     if (data.isNotEmpty) {
       for (var element in data) {
         productList.add(ProductEntity.fromJson(element));

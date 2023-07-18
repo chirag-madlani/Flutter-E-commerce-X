@@ -6,6 +6,7 @@ import 'package:flutter_application_ecommerce/Model/Tools/Constant/const.dart';
 import 'package:flutter_application_ecommerce/Model/Widget/widget.dart';
 import 'package:flutter_application_ecommerce/View/CartScreen/CheckoutScreen/check_screen.dart';
 import 'package:flutter_application_ecommerce/View/CartScreen/bloc/cart_bloc.dart';
+import 'package:flutter_application_ecommerce/ViewModel/Home/HomeDataSource/product_detatils.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 
@@ -37,6 +38,7 @@ class _CartScreenState extends State<CartScreen> {
       child: BlocBuilder<CartBloc, CartState>(
         builder: (context, state) {
           final duplicateController = Get.find<DuplicateController>();
+          Loadjson.readjson();
           final colors = duplicateController.colors;
           final textStyle = duplicateController.textStyle;
           final uiDuplicate = duplicateController.uiDuplicate;

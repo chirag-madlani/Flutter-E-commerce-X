@@ -34,13 +34,13 @@ class AppException extends StatelessWidget {
           children: [
             errorMessage == null
                 ? Text(
-                    "Undefined Error",
-                    style: textStyle.titleLarge,
-                  )
+              "Undefined Error",
+              style: textStyle.titleLarge,
+            )
                 : Text(
-                    errorMessage!,
-                    style: textStyle.titleLarge,
-                  ),
+              errorMessage!,
+              style: textStyle.titleLarge,
+            ),
             const SizedBox(
               height: 10,
             ),
@@ -79,25 +79,13 @@ Widget imageLoading() {
       color: colors.primary, size: 20);
 }
 
-Widget networkImage({required String imageUrl, double? width, double? height}) {
-  return CachedNetworkImage(
-    imageUrl: imageUrl,
-    fit: BoxFit.cover,
-    width: width,
-    height: height,
-    placeholder: (context, url) {
-      return imageLoading();
-    },
-  );
-}
-
 class HomeProductView extends StatelessWidget {
   const HomeProductView(
       {Key? key,
-      required this.product,
-      required this.textStyle,
-      required this.colors,
-      required this.profileFunctions})
+        required this.product,
+        required this.textStyle,
+        required this.colors,
+        required this.profileFunctions})
       : super(key: key);
 
   final ProductEntity product;
@@ -127,7 +115,7 @@ class HomeProductView extends StatelessWidget {
                 SizedBox(
                     width: 100,
                     height: 100,
-                    child: networkImage(imageUrl: product.imageUrl)),
+                    child: Image.asset(product.imageUrl)),
                 const SizedBox(
                   height: 5,
                 ),
@@ -154,10 +142,10 @@ class HomeProductView extends StatelessWidget {
 class FavoriteBadge extends StatefulWidget {
   const FavoriteBadge(
       {super.key,
-      required this.product,
-      required this.badgeBackgroundColor,
-      required this.activeColor,
-      required this.inActive});
+        required this.product,
+        required this.badgeBackgroundColor,
+        required this.activeColor,
+        required this.inActive});
   final ProductEntity product;
   final Color badgeBackgroundColor;
   final Color activeColor;
@@ -171,7 +159,7 @@ class _FavoriteBadgeState extends State<FavoriteBadge> {
   Widget build(BuildContext context) {
     final profileFunctions = Get.find<ProfileController>().profileFunctions;
     final isInBox =
-        profileFunctions.isInFavoriteBox(productEntity: widget.product);
+    profileFunctions.isInFavoriteBox(productEntity: widget.product);
     return SizedBox(
       width: 20,
       height: 20,
@@ -190,15 +178,15 @@ class _FavoriteBadgeState extends State<FavoriteBadge> {
           },
           child: isInBox
               ? Icon(
-                  CupertinoIcons.heart_fill,
-                  size: 20,
-                  color: widget.activeColor,
-                )
+            CupertinoIcons.heart_fill,
+            size: 20,
+            color: widget.activeColor,
+          )
               : Icon(
-                  CupertinoIcons.heart,
-                  color: widget.inActive,
-                  size: 20,
-                ),
+            CupertinoIcons.heart,
+            color: widget.inActive,
+            size: 20,
+          ),
         ),
       ),
     );
@@ -241,7 +229,7 @@ class ShopProductView extends StatelessWidget {
                 height: 100,
                 child: ClipRRect(
                     borderRadius: BorderRadius.circular(15),
-                    child: networkImage(imageUrl: product.imageUrl))),
+                    child: Image.asset(product.imageUrl))),
             const SizedBox(
               height: 5,
             ),
@@ -287,7 +275,7 @@ class CartLengthBadge extends StatelessWidget {
           badgeContent: Container(
             alignment: Alignment.center,
             decoration:
-                BoxDecoration(shape: BoxShape.circle, color: colors.primary),
+            BoxDecoration(shape: BoxShape.circle, color: colors.primary),
             child: Text(
               value.values.length.toString(),
               style: textStyle.bodySmall.copyWith(color: colors.whiteColor),
@@ -339,7 +327,7 @@ class HorizontalProductView extends StatelessWidget {
                 child: SizedBox(
                     width: 100,
                     height: 100,
-                    child: networkImage(imageUrl: product.imageUrl))),
+                    child: Image.asset(product.imageUrl))),
             const SizedBox(
               width: 20,
             ),
@@ -420,9 +408,9 @@ class CartBottomItem extends StatelessWidget {
           decoration: BoxDecoration(
               color: colors.gray,
               borderRadius:
-                  const BorderRadius.vertical(top: Radius.circular(15))),
+              const BorderRadius.vertical(top: Radius.circular(15))),
           padding:
-              const EdgeInsets.only(top: 10, right: 20, left: 20, bottom: 10),
+          const EdgeInsets.only(top: 10, right: 20, left: 20, bottom: 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -435,7 +423,7 @@ class CartBottomItem extends StatelessWidget {
                     child: ElevatedButton(
                         style: ButtonStyle(
                             backgroundColor:
-                                MaterialStatePropertyAll(colors.blackColor)),
+                            MaterialStatePropertyAll(colors.blackColor)),
                         onPressed: callback,
                         child: Text(
                           navigateName,
@@ -465,9 +453,9 @@ Widget duplicateContainer(
 
 void snackBar(
     {required String title,
-    required String message,
-    required CustomTextStyle textStyle,
-    required CustomColors colors}) {
+      required String message,
+      required CustomTextStyle textStyle,
+      required CustomColors colors}) {
   Get.snackbar(title, "",
       messageText: AutoSizeText(
         message,
@@ -480,14 +468,14 @@ void snackBar(
 class ProductListView extends StatelessWidget {
   const ProductListView(
       {super.key,
-      required this.colors,
-      required this.textStyle,
-      required this.productList,
-      required this.title,
-      required this.physics,
-      required this.reverse,
-      required this.callback,
-      required this.profileFunctions});
+        required this.colors,
+        required this.textStyle,
+        required this.productList,
+        required this.title,
+        required this.physics,
+        required this.reverse,
+        required this.callback,
+        required this.profileFunctions});
   final CustomColors colors;
   final CustomTextStyle textStyle;
   final List<ProductEntity> productList;
@@ -518,7 +506,7 @@ class ProductListView extends StatelessWidget {
                     Text(
                       "See all",
                       style:
-                          textStyle.bodyNormal.copyWith(color: colors.primary),
+                      textStyle.bodyNormal.copyWith(color: colors.primary),
                     ),
                     Icon(
                       Icons.keyboard_double_arrow_right,
@@ -562,10 +550,10 @@ class ProductListView extends StatelessWidget {
 class BannerListView extends StatelessWidget {
   const BannerListView(
       {super.key,
-      required this.produtList,
-      required this.colors,
-      required this.textStyle,
-      required this.callback});
+        required this.produtList,
+        required this.colors,
+        required this.textStyle,
+        required this.callback});
   final List<ProductEntity> produtList;
   final CustomColors colors;
   final CustomTextStyle textStyle;
@@ -591,7 +579,7 @@ class BannerListView extends StatelessWidget {
                     Text(
                       "See all",
                       style:
-                          textStyle.bodyNormal.copyWith(color: colors.primary),
+                      textStyle.bodyNormal.copyWith(color: colors.primary),
                     ),
                     Icon(
                       Icons.keyboard_double_arrow_right,
@@ -605,19 +593,19 @@ class BannerListView extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          CarouselSlider.builder(
-              itemCount: produtList.length - 20,
-              itemBuilder: (context, index, realIndex) {
-                return networkImage(
-                  imageUrl: produtList[index].imageUrl,
-                );
-              },
-              options: CarouselOptions(
-                enlargeCenterPage: true,
-                autoPlay: true,
-                autoPlayCurve: Curves.easeInCubic,
-                enlargeStrategy: CenterPageEnlargeStrategy.height,
-              ))
+          // CarouselSlider.builder(
+          //     itemCount: produtList.length - 20,
+          //     itemBuilder: (context, index, realIndex) {
+          //       return Image.asset(
+          //          produtList[index].imageUrl,
+          //       );
+          //     },
+          //     options: CarouselOptions(
+          //       enlargeCenterPage: true,
+          //       autoPlay: true,
+          //       autoPlayCurve: Curves.easeInCubic,
+          //       enlargeStrategy: CenterPageEnlargeStrategy.height,
+          //     ))
         ],
       ),
     );
@@ -770,13 +758,13 @@ class DuplicateTemplate extends StatelessWidget {
 
 Widget textField(
     {required CustomTextStyle textStyle,
-    required TextEditingController controller,
-    required GlobalKey<FormState> formKey,
-    required String lable,
-    required CustomColors colors,
-    required EdgeInsetsGeometry edgeInsetsGeometry,
-    TextInputType inputType = TextInputType.emailAddress,
-    bool obscureText = false,Widget? suffix}) {
+      required TextEditingController controller,
+      required GlobalKey<FormState> formKey,
+      required String lable,
+      required CustomColors colors,
+      required EdgeInsetsGeometry edgeInsetsGeometry,
+      TextInputType inputType = TextInputType.emailAddress,
+      bool obscureText = false,Widget? suffix}) {
   return Padding(
       padding: edgeInsetsGeometry,
       child: Theme(
@@ -805,7 +793,7 @@ Widget textField(
                   labelStyle: textStyle.bodyNormal,
                   suffix: suffix,
                   floatingLabelStyle:
-                      textStyle.bodySmall.copyWith(fontWeight: FontWeight.w700),
+                  textStyle.bodySmall.copyWith(fontWeight: FontWeight.w700),
                   focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12)))),
         ),
@@ -814,8 +802,8 @@ Widget textField(
 
 Widget addressEditButton(
     {required GestureTapCallback callback,
-    required CustomColors colors,
-    required CustomTextStyle textStyle}) {
+      required CustomColors colors,
+      required CustomTextStyle textStyle}) {
   return CupertinoButton(
       onPressed: callback,
       child: Icon(
@@ -827,18 +815,18 @@ Widget addressEditButton(
 
 void addAddressBottomSheet(
     {required CustomTextStyle textStyle,
-    required CustomColors colors,
-    required ScrollPhysics scrollPhysics,
-    required GestureTapCallback osSaveClicked,
-    required TextEditingController adNameController,
-    required GlobalKey<FormState> adNameKey,
-    required TextEditingController stateController,
-    required GlobalKey<FormState> stateKey,
-    required TextEditingController addressController,
-    required GlobalKey<FormState> addressKey,
-    required TextEditingController postalController,
-    required GlobalKey<FormState> postalKey,
-    required Widget dropDown}) {
+      required CustomColors colors,
+      required ScrollPhysics scrollPhysics,
+      required GestureTapCallback osSaveClicked,
+      required TextEditingController adNameController,
+      required GlobalKey<FormState> adNameKey,
+      required TextEditingController stateController,
+      required GlobalKey<FormState> stateKey,
+      required TextEditingController addressController,
+      required GlobalKey<FormState> addressKey,
+      required TextEditingController postalController,
+      required GlobalKey<FormState> postalKey,
+      required Widget dropDown}) {
   showModalBottomSheet(
     isScrollControlled: true,
     shape: const OutlineInputBorder(
@@ -853,10 +841,10 @@ void addAddressBottomSheet(
         decoration: BoxDecoration(
             color: colors.whiteColor,
             borderRadius:
-                const BorderRadius.vertical(top: Radius.circular(15))),
+            const BorderRadius.vertical(top: Radius.circular(15))),
         child: Scaffold(
           floatingActionButtonLocation:
-              FloatingActionButtonLocation.centerFloat,
+          FloatingActionButtonLocation.centerFloat,
           floatingActionButton: SizedBox(
               width: Get.size.width * 0.5,
               child: FloatingActionButton.extended(
@@ -865,7 +853,7 @@ void addAddressBottomSheet(
                   label: Text(
                     "Save",
                     style:
-                        textStyle.bodyNormal.copyWith(color: colors.whiteColor),
+                    textStyle.bodyNormal.copyWith(color: colors.whiteColor),
                   ))),
           body: SingleChildScrollView(
             physics: scrollPhysics,
@@ -944,44 +932,44 @@ void loginRequiredDialog({required CustomTextStyle textStyle}) {
   showCupertinoDialog(
       context: Get.context!,
       builder: (context) => CupertinoAlertDialog(
-            title: Text(
-              "Login",
-              style: textStyle.titleLarge,
+        title: Text(
+          "Login",
+          style: textStyle.titleLarge,
+        ),
+        content: Column(
+          children: [
+            LottieBuilder.network(
+              loginLottie,
+              width: 200,
+              height: 200,
             ),
-            content: Column(
-              children: [
-                LottieBuilder.network(
-                  loginLottie,
-                  width: 200,
-                  height: 200,
-                ),
-                Text(
-                  "To continue to payment please login",
-                  style: textStyle.bodyNormal,
-                  overflow: TextOverflow.clip,
-                  textAlign: TextAlign.start,
-                ),
-              ],
+            Text(
+              "To continue to payment please login",
+              style: textStyle.bodyNormal,
+              overflow: TextOverflow.clip,
+              textAlign: TextAlign.start,
             ),
-            actions: [
-              CupertinoButton(
-                child: Text(
-                  "Cancel",
-                  style: textStyle.bodyNormal,
-                ),
-                onPressed: () {
-                  Get.back();
-                },
-              ),
-              CupertinoButton(
-                  onPressed: () {
-                    Get.back();
-                    Get.to(const AuthenticationScreen());
-                  },
-                  child: Text(
-                    "Login",
-                    style: textStyle.bodyNormal,
-                  )),
-            ],
-          ));
+          ],
+        ),
+        actions: [
+          CupertinoButton(
+            child: Text(
+              "Cancel",
+              style: textStyle.bodyNormal,
+            ),
+            onPressed: () {
+              Get.back();
+            },
+          ),
+          CupertinoButton(
+              onPressed: () {
+                Get.back();
+                Get.to(const AuthenticationScreen());
+              },
+              child: Text(
+                "Login",
+                style: textStyle.bodyNormal,
+              )),
+        ],
+      ));
 }
