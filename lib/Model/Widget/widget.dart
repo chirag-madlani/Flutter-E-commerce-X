@@ -127,7 +127,7 @@ class HomeProductView extends StatelessWidget {
                 SizedBox(
                     width: 100,
                     height: 100,
-                    child: networkImage(imageUrl: product.imageUrl)),
+                    child: Image.asset(product.imageUrl)),
                 const SizedBox(
                   height: 5,
                 ),
@@ -608,8 +608,8 @@ class BannerListView extends StatelessWidget {
           CarouselSlider.builder(
               itemCount: produtList.length - 20,
               itemBuilder: (context, index, realIndex) {
-                return networkImage(
-                  imageUrl: produtList[index].imageUrl,
+                return Image.asset(
+                  produtList[0].imageUrl
                 );
               },
               options: CarouselOptions(

@@ -1,0 +1,12 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name" : "DreamCatcher",
+      "image_link": "assets/Img/about.png",
+      "price": "300",
+      "description": "multicolor",
+      "product_type": "Home Decode"
+    }
+  ]
+}
