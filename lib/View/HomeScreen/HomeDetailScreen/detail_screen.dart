@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_ecommerce/Model/GetX/Controller/duplicate_controller.dart';
@@ -151,10 +150,11 @@ class _DetailScreenState extends State<DetailScreen> {
                     ),
                     height: 300,
                     width: 300,
-                    child: CachedNetworkImage(
-                      imageUrl: widget.productEntity.imageUrl,
-                      fit: BoxFit.cover,
-                    ),
+                    child: Image.asset(widget.productEntity.imageUrl),
+                    // CachedNetworkImage(
+                    //   imageUrl: widget.productEntity.imageUrl,
+                    //   fit: BoxFit.cover,
+                    // ),
                   ),
                 ],
               ),
