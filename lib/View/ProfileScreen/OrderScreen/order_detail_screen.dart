@@ -46,7 +46,7 @@ class OrderDetailScreen extends StatelessWidget {
                       Container(
                           margin: const EdgeInsets.only(top: 10, bottom: 10),
                           width: 130,
-                          child: Image.asset(product.imageUrl)),
+                          child: networkImage(imageUrl: product.imageUrl)),
                       Column(
                         children: [
                           Text(

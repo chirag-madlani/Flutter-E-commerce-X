@@ -79,6 +79,18 @@ Widget imageLoading() {
       color: colors.primary, size: 20);
 }
 
+Widget networkImage({required String imageUrl, double? width, double? height}) {
+  return CachedNetworkImage(
+    imageUrl: imageUrl,
+    fit: BoxFit.cover,
+    width: width,
+    height: height,
+    placeholder: (context, url) {
+      return imageLoading();
+    },
+  );
+}
+
 class HomeProductView extends StatelessWidget {
   const HomeProductView(
       {Key? key,
@@ -593,19 +605,17 @@ class BannerListView extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          // CarouselSlider.builder(
-          //     itemCount: produtList.length - 20,
-          //     itemBuilder: (context, index, realIndex) {
-          //       return Image.asset(
-          //          produtList[index].imageUrl,
-          //       );
-          //     },
-          //     options: CarouselOptions(
-          //       enlargeCenterPage: true,
-          //       autoPlay: true,
-          //       autoPlayCurve: Curves.easeInCubic,
-          //       enlargeStrategy: CenterPageEnlargeStrategy.height,
-          //     ))
+          CarouselSlider.builder(
+              itemCount: produtList.length - 20,
+              itemBuilder: (context, index, realIndex) {
+                return Image.asset(produtList[0].imageUrl);
+              },
+              options: CarouselOptions(
+                enlargeCenterPage: true,
+                autoPlay: true,
+                autoPlayCurve: Curves.easeInCubic,
+                enlargeStrategy: CenterPageEnlargeStrategy.height,
+              ))
         ],
       ),
     );

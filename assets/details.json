@@ -3,40 +3,40 @@
       "id" : 0,
       "name" : "Dreamcather",
       "price" : "300",
-      "image_link":"assets/img/about.png",
+      "image_link":"assets/images/product/dreamcather1.jpg",
+      "product_type": "HomeDecoration",
+      "description": "Customization available"
+    },
+    {
+      "id" : 1,
+      "name" : "Dreamcather",
+      "price" : "300",
+      "image_link":"assets/images/product/dreamcather2.jpg",
+      "product_type": "HomeDecoration",
+      "description": "Customization available"
+    },
+    {
+      "id" : 2,
+      "name" : "Dreamcather",
+      "price" : "300",
+      "image_link":"assets/images/product/dreamcather3.jpg",
+      "product_type": "HomeDecoration",
+      "description": "Customization available"
+    },
+    {
+      "id" : 3,
+      "name" : "Dreamcather",
+      "price" : "300",
+      "image_link":"assets/images/product/dreamcather4.jpg",
+      "product_type": "HomeDecoration",
+      "description": "Customization available"
+    },
+    {
+      "id" : 4,
+      "name" : "Dreamcather",
+      "price" : "300",
+      "image_link":"assets/images/product/dreamcather5.jpg",
       "product_type": "HomeDecoration",
       "description": "Customization available"
     }
-//    {
-//      "id" : 1,
-//      "name" : "Dreamcather",
-//      "price" : "300",
-//      "image_link":"assets/images/product/dreamcather2.jpg",
-//      "product_type": "HomeDecoration",
-//      "description": "Customization available"
-//    },
-//    {
-//      "id" : 2,
-//      "name" : "Dreamcather",
-//      "price" : "300",
-//      "image_link":"assets/images/product/dreamcather3.jpg",
-//      "product_type": "HomeDecoration",
-//      "description": "Customization available"
-//    },
-//    {
-//      "id" : 3,
-//      "name" : "Dreamcather",
-//      "price" : "300",
-//      "image_link":"assets/images/product/dreamcather4.jpg",
-//      "product_type": "HomeDecoration",
-//      "description": "Customization available"
-//    },
-//    {
-//      "id" : 4,
-//      "name" : "Dreamcather",
-//      "price" : "300",
-//      "image_link":"assets/images/product/dreamcather5.jpg",
-//      "product_type": "HomeDecoration",
-//      "description": "Customization available"
-//    }
   ]

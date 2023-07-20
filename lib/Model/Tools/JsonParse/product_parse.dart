@@ -4,9 +4,9 @@ part 'product_parse.g.dart';
 
 @HiveType(typeId: 0)
 class ProductEntity {
- // @HiveField(0)
+  @HiveField(0)
   final int id;
-  //@HiveField(1)
+  @HiveField(1)
   final String name;
   @HiveField(2)
   final String price;
