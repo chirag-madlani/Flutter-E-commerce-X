@@ -204,7 +204,7 @@ class ProfileScreen extends StatelessWidget {
         );
       } else {
         return Text(
-          "Amir Bashiri",
+          "Kinjal majithiya",
           style: textStyle.titleLarge,
         );
       }
@@ -222,7 +222,7 @@ class ProfileScreen extends StatelessWidget {
         );
       } else {
         return Text(
-          "emirbashiri@gmail.com",
+          "kinjal.majithiya2000@gmail.com",
           style: textStyle.bodyNormal,
         );
       }

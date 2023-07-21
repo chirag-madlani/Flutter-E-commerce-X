@@ -2,9 +2,9 @@
     package="com.EcommerceX.app">
     <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="E-Commerce X"
+        android:label="Creativity_here"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/launcher_icon"
         android:requestLegacyExternalStorage="true">
         <activity
             android:name=".MainActivity"

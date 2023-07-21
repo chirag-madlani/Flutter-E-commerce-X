@@ -24,19 +24,19 @@ class _IntroScreenState extends State<IntroScreen> {
         backgroundColor: colors.primary,
         title: "Craetivity here",
         description:
-            "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+            "Welcome to creativity here",
         pathImage: manImage),
     ContentConfig(
         backgroundColor: colors.primary,
-        title: "E-commerce X",
+        title: "Creativity here",
         description:
-            "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+        "Welcome to creativity here",
         pathImage: aboutImage),
     ContentConfig(
         backgroundColor: colors.primary,
-        title: "E-commerce X",
+        title: "Creativity here",
         description:
-            "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+        "Welcome to creativity here",
         pathImage: contentImage)
   ];
   @override

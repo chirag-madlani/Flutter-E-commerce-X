@@ -108,8 +108,8 @@ class _DetailScreenState extends State<DetailScreen> {
                     color: colors.blackColor,
                   ),
                   onPressed: () {
-                    Share.shareWithResult("https://github.com/EmirBashiri",
-                        subject: "Developer github profile");
+                    Share.shareWithResult("https://instagram.com/_creativity_here",
+                        subject: "Developer instagram profile");
                   },
                 ),
               )
@@ -230,7 +230,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                 width: 5,
                               ),
                               Text(
-                                "1.248 Reviews",
+                                "1.243 Reviews",
                                 style: textStyle.bodyNormal,
                               )
                             ],

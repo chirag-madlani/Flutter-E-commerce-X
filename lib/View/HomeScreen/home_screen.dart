@@ -22,6 +22,7 @@ class HomeScreen extends StatefulWidget {
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
+
 }
 
 HomeBloc? homeBloc;
@@ -31,6 +32,7 @@ class _HomeScreenState extends State<HomeScreen>
   final duplicateController = Get.find<DuplicateController>();
   final homeController = Get.find<HomeController>();
   final getContext = Get.context!;
+
   @override
   void initState() {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -54,7 +56,9 @@ class _HomeScreenState extends State<HomeScreen>
         bloc.add(HomeStart());
         homeBloc = bloc;
         return bloc;
+
       },
+
       child: BlocBuilder<HomeBloc, HomeState>(
         builder: (context, state) {
           final CustomColors colors = duplicateController.colors;
@@ -74,7 +78,7 @@ class _HomeScreenState extends State<HomeScreen>
                 backgroundColor: colors.blackColor,
                 centerTitle: true,
                 title: Text(
-                  "Store",
+                  "Creativity_here",
                   style:
                       textStyle.titleLarge.copyWith(color: colors.whiteColor),
                 ),
@@ -94,26 +98,26 @@ class _HomeScreenState extends State<HomeScreen>
                             onPressed: () {
                               Get.back();
                               launchUrl(
-                                Uri.parse(developerGithub),
+                                Uri.parse(Contactus),
                                 mode: LaunchMode.externalApplication,
                               );
                             },
                             child: Text(
-                              "Developer Github page",
+                              "Contact Us",
                               style: textStyle.bodyNormal,
                             ),
                           )),
-                          PopupMenuItem(
-                              child: TextButton(
-                            onPressed: () {
-                              Get.back();
-                              showLicensePage(context: context);
-                            },
-                            child: Text(
-                              "Application license",
-                              style: textStyle.bodyNormal,
-                            ),
-                          ))
+                          // PopupMenuItem(
+                          //     child: TextButton(
+                          //   onPressed: () {
+                          //     Get.back();
+                          //     showLicensePage(context: context);
+                          //   },
+                          //   child: Text(
+                          //     "Application license",
+                          //     style: textStyle.bodyNormal,
+                          //   ),
+                          // ))
                         ]);
                   },
                 ),
@@ -143,7 +147,7 @@ class _HomeScreenState extends State<HomeScreen>
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                "Maybelline Collection",
+                                "Home Decoration Items",
                                 style: textStyle.titleLarge.copyWith(
                                   overflow: TextOverflow.clip,
                                 ),
@@ -152,8 +156,8 @@ class _HomeScreenState extends State<HomeScreen>
                                 height: 5,
                               ),
                               Text(
-                                "Find the perfect watch for your wrist",
-                                style: textStyle.bodyNormal,
+                                "Find the perfect Dreamcather for your Home Decoration",
+                                style: textStyle.bodySmall,
                               )
                             ],
                           ),
@@ -168,15 +172,15 @@ class _HomeScreenState extends State<HomeScreen>
                             productList: productList,
                             callback: () {
                               Get.to(ShopScreen(
-                                  title: "Latest", productList: productList));
+                                  title: "Dreamcather", productList: productList));
                             },
-                            title: "Latest");
+                            title: "Dreamcather");
 
                       case 3:
                         return BannerListView(
                             callback: () {
                               Get.to(ShopScreen(
-                                  title: "Top deals",
+                                  title: "Car hanging",
                                   productList: productList));
                             },
                             produtList: productList,
@@ -189,7 +193,7 @@ class _HomeScreenState extends State<HomeScreen>
                             colors: colors,
                             textStyle: textStyle,
                             productList: productList.reversed.toList(),
-                            title: "Featured products",
+                            title: "Keychains",
                             physics: physics,
                             callback: () {
                               Get.to(ShopScreen(

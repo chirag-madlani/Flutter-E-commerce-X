@@ -85,6 +85,7 @@ class ProfileFunctions {
   }
 
   ValueListenable favoriteListenable() {
+    //final box = Hive.openBox(<ProductEntity>)(favoriteBox);
     final box = Hive.box<ProductEntity>(favoriteBox);
     return box.listenable();
   }

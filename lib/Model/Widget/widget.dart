@@ -15,6 +15,8 @@ import 'package:flutter_application_ecommerce/View/HomeScreen/HomeDetailScreen/d
 import 'package:flutter_application_ecommerce/View/ProfileScreen/AuthenticationScreen/authentication_screen.dart';
 import 'package:flutter_application_ecommerce/ViewModel/Profile/profile.dart';
 import 'package:get/get.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:lottie/lottie.dart';
 
@@ -549,6 +551,12 @@ class ProductListView extends StatelessWidget {
                     textStyle: textStyle,
                     colors: colors,
                   ),
+                  // child: HomeProductView(
+                  //   profileFunctions: profileFunctions,
+                  //   product: product,
+                  //   textStyle: textStyle,
+                  //   colors: colors,
+                  // ),
                 );
               },
             ),

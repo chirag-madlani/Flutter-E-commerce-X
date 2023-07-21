@@ -1,4 +1,4 @@
-# Flutter E-commerce X 
+# Flutter Creativity-here
 
 A flutter E-commerce app template.
 
@@ -16,10 +16,3 @@ A flutter E-commerce app template.
 
 Intro , Home , Cart , Profile , Search , Checkout , Payment , Login$SignUp , Favorits , Order history , User Address , Shoping
 
-### Development Notice
-
-1- Clone project with https://github.com/EmirBashiri/Flutter-E-commerce-X.git
-
-2- Run flutter pub get in terminal
-
-3- Run flutter run in terminal and enjoy

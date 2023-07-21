@@ -17,9 +17,11 @@ class MyApp extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
+
     bool isFirst =
         Get.find<DuplicateController>().introFunctions.getLaunchStatus();
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       initialBinding: InitialBinding(),
       title: 'Creativity here',
       home: isFirst
