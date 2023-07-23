@@ -29,7 +29,7 @@ class InitialController extends GetxController {
     final duplicateContrller = Get.find<DuplicateController>();
     final profileController = Get.find<ProfileController>();
     await profileController.profileFunctions.openFavoriteBox();
-    // await duplicateContrller.cartFunctions.openCartBox();
+    await duplicateContrller.cartFunctions.openCartBox();
 
     profileController.userSetImageInstance.value =
         profileController.profileFunctions.isUserSavedImage();

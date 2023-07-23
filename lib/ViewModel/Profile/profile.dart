@@ -11,7 +11,7 @@ import 'package:image_picker/image_picker.dart';
 class ProfileFunctions {
   final String imageStorge = "ImageSotrge";
   final GetStorage storage = GetStorage();
-  final String favoriteBox = "Favorite Box";
+  final String favoriteBox = "FavoriteBox";
 
   Future<bool> saveImageInSotrge({required String path}) async {
     await storage.write(imageStorge, path);
