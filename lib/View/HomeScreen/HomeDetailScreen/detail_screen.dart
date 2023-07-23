@@ -18,12 +18,14 @@ class DetailScreen extends StatefulWidget {
   const DetailScreen({super.key, required this.productEntity});
   final ProductEntity productEntity;
 
+
   @override
   State<DetailScreen> createState() => _DetailScreenState();
 }
 
 class _DetailScreenState extends State<DetailScreen> {
   final double rate = Random.secure().nextInt(5).toDouble();
+  double fullrating=0;
   @override
   Widget build(BuildContext context) {
     final duplicateController = Get.find<DuplicateController>();
@@ -210,12 +212,17 @@ class _DetailScreenState extends State<DetailScreen> {
                                     title: Center(
                                       child: RatingBarIndicator(
                                         itemCount: 5,
+
                                         rating: value,
                                         itemBuilder: (context, index) {
                                           return Icon(
                                             Icons.star,
                                             color: colors.amber,
                                           );
+
+                                           setState(() {
+                                             fullrating= value;
+                                           });
                                         },
                                       ),
                                     ),
@@ -229,10 +236,11 @@ class _DetailScreenState extends State<DetailScreen> {
                               const SizedBox(
                                 width: 5,
                               ),
-                              Text(
-                                "1.243 Reviews",
+                               Text(
+                                 'Rating:$fullrating',
+                              //  "1.243 Reviews",
                                 style: textStyle.bodyNormal,
-                              )
+                               )
                             ],
                           )
                         ],
@@ -250,7 +258,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         height: 20,
                       ),
                       Text(
-                        "€${widget.productEntity.price}",
+                        "\u20B9 ${widget.productEntity.price}",
                         style: textStyle.titleLarge
                             .copyWith(color: colors.primary),
                       ),

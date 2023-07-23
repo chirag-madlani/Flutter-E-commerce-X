@@ -141,7 +141,7 @@ class HomeProductView extends StatelessWidget {
                   height: 5,
                 ),
                 Text(
-                  "€${product.price}",
+                  "\u20B9 ${product.price}",
                   style: textStyle.bodyNormal,
                 )
               ],
@@ -233,7 +233,8 @@ class ShopProductView extends StatelessWidget {
           activeColor: colors.blackColor,
           inActive: colors.blackColor,
         ),
-        child: Column(
+        child: SingleChildScrollView(
+          child: Column(
           children: [
             const SizedBox(
               height: 10,
@@ -255,13 +256,13 @@ class ShopProductView extends StatelessWidget {
               height: 5,
             ),
             Text(
-              "€${product.price}",
+              "\u20B9 ${product.price}",
               style: textStyle.bodyNormal.copyWith(color: colors.whiteColor),
             )
           ],
         ),
       ),
-    );
+      ), );
   }
 }
 
@@ -334,7 +335,9 @@ class HorizontalProductView extends StatelessWidget {
         padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
             color: colors.blackColor, borderRadius: BorderRadius.circular(15)),
-        child: Row(
+        child:SingleChildScrollView(
+           scrollDirection: Axis.horizontal,
+          child: Row(
           children: [
             ClipRRect(
                 borderRadius: BorderRadius.circular(12),
@@ -354,7 +357,7 @@ class HorizontalProductView extends StatelessWidget {
                     product.name,
                     style: textStyle.bodyNormal.copyWith(
                         fontWeight: FontWeight.bold, color: colors.whiteColor),
-                    overflow: TextOverflow.clip,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
                 const SizedBox(
@@ -366,7 +369,8 @@ class HorizontalProductView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Column(
+                      SingleChildScrollView(
+                        child: Column(
                         children: [
                           Text(
                             product.productType,
@@ -377,14 +381,14 @@ class HorizontalProductView extends StatelessWidget {
                             height: 10,
                           ),
                           Text(
-                            "€${product.price}",
+                            "\u20B9 ${product.price}",
                             style: textStyle.bodyNormal.copyWith(
                                 color: colors.whiteColor,
                                 fontWeight: FontWeight.bold),
                           ),
                         ],
-                      ),
-                      widget
+                      ),),
+
                     ],
                   ),
                 )
@@ -393,7 +397,7 @@ class HorizontalProductView extends StatelessWidget {
           ],
         ),
       ),
-    );
+      ) );
   }
 }
 
@@ -588,7 +592,7 @@ class BannerListView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Top deals",
+                "Car hangings",
                 style: textStyle.titleLarge
                     .copyWith(fontWeight: FontWeight.normal),
               ),

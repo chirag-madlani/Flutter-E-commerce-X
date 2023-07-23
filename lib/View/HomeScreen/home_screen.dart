@@ -171,6 +171,7 @@ class _HomeScreenState extends State<HomeScreen>
                             textStyle: textStyle,
                             productList: productList,
                             callback: () {
+
                               Get.to(ShopScreen(
                                   title: "Dreamcather", productList: productList));
                             },
@@ -197,7 +198,7 @@ class _HomeScreenState extends State<HomeScreen>
                             physics: physics,
                             callback: () {
                               Get.to(ShopScreen(
-                                  title: "Featured products",
+                                  title: "Keychains",
                                   productList: productList.reversed.toList()));
                             },
                             reverse: false);

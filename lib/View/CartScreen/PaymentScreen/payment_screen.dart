@@ -240,7 +240,7 @@ class PaymentScreen extends StatelessWidget {
                             style: textStyle.bodyNormal,
                           ),
                           suffix: Text(
-                            "€$totalPrice",
+                            "\u20B9 $totalPrice",
                             style: textStyle.bodyNormal
                                 .copyWith(fontWeight: FontWeight.bold),
                           )),

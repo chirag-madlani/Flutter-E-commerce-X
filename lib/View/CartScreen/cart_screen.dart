@@ -47,7 +47,9 @@ class _CartScreenState extends State<CartScreen> {
                 colors: colors,
                 textStyle: textStyle,
                 title:"Cart Screen",
+
                 child: Stack(
+
                     children: [
                       Positioned.fill(
                         child: ListView.builder(
@@ -59,8 +61,9 @@ class _CartScreenState extends State<CartScreen> {
                             return HorizontalProductView(
                                 colors: colors,
                                 margin: const EdgeInsets.only(
-                                    top: 15, right: 10, bottom: 15, left: 10),
+                                    top: 15, right: 30, bottom: 15, left: 10),
                                 product: product,
+
                                 widget: CupertinoButton(
                                     child: Icon(
                                       Icons.delete,
@@ -102,7 +105,7 @@ class _CartScreenState extends State<CartScreen> {
                             SizedBox(
                               width: 200,
                               child: AutoSizeText(
-                                "€$totalPrice",
+                                "\u20B9 $totalPrice",
                                 style:
                                     textStyle.titleLarge.copyWith(fontSize: 20),
                                 maxFontSize: 25,

@@ -60,7 +60,7 @@ class OrderDetailScreen extends StatelessWidget {
                             height: 10,
                           ),
                           Text(
-                            "€${product.price}",
+                            "\u20B9 ${product.price}",
                             style: textStyle.bodyNormal,
                           ),
                         ],

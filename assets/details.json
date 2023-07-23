@@ -1,42 +1,122 @@
 [
     {
       "id" : 0,
-      "name" : "Dreamcather",
+      "name" : "multicoloreddreamcather",
       "price" : "300",
       "image_link":"assets/images/product/dreamcather1.jpg",
       "product_type": "HomeDecoration",
-      "description": "Customization available"
+      "description": "It is multicolored dreamcather."
     },
     {
       "id" : 1,
-      "name" : "Dreamcather",
+      "name" : "SansaDreamcather",
       "price" : "300",
       "image_link":"assets/images/product/dreamcather2.jpg",
       "product_type": "HomeDecoration",
-      "description": "Customization available"
+      "description": "Multicolored dreamcather with capiz."
     },
     {
       "id" : 2,
-      "name" : "Dreamcather",
+      "name" : "BeadedDreamcather",
       "price" : "300",
       "image_link":"assets/images/product/dreamcather3.jpg",
       "product_type": "HomeDecoration",
-      "description": "Customization available"
+      "description": "Theambased Dreamcather.Give a pop of color to any room.It looks bright and charming."
     },
     {
       "id" : 3,
-      "name" : "Dreamcather",
+      "name" : "ClusterDreamcather",
       "price" : "300",
       "image_link":"assets/images/product/dreamcather4.jpg",
       "product_type": "HomeDecoration",
-      "description": "Customization available"
+      "description": "Clustered Dreamcather with fairy lights."
     },
     {
       "id" : 4,
-      "name" : "Dreamcather",
+      "name" : "CrochetDreamcather",
       "price" : "300",
       "image_link":"assets/images/product/dreamcather5.jpg",
       "product_type": "HomeDecoration",
-      "description": "Customization available"
-    }
-  ]
+      "description": "Crochet Dreamcather with MultiColored Ribbons."
+    },
+  {
+    "id" : 5,
+    "name" : "krishna carhanging",
+    "price" : "300",
+    "image_link":"assets/images/product/carhanging1.jpg",
+    "product_type": "HomeDecoration",
+    "description": "combination of light pink and sea green colored feathers."
+  },
+  {
+    "id" : 6,
+    "name" : "GoodvibesOnly",
+    "price" : "300",
+    "image_link":"assets/images/product/carhanging2.jpg",
+    "product_type": "HomeDecoration",
+    "description": "White and blue colored carhanging with GoodVibesOnlyLetters."
+  },
+  {
+    "id" : 7,
+    "name" : "MahadevaCarhanging",
+    "price" : "300",
+    "image_link":"assets/images/product/carhanging3.jpg",
+    "product_type": "HomeDecoration",
+    "description": "Mahadeva carhanging with yellow feathers."
+  },
+  {
+    "id" : 8,
+    "name" : "Om carhanging",
+    "price" : "300",
+    "image_link":"assets/images/product/carhanging4.jpg",
+    "product_type": "HomeDecoration",
+    "description": "Customized Carhanging."
+  },
+  {
+    "id" : 9,
+    "name" : "Aadiyogi",
+    "price" : "300",
+    "image_link":"assets/images/product/carhanging5.jpg",
+    "product_type": "HomeDecoration",
+    "description": "Aadiyogi car hanging with white feathers."
+  },
+  {
+    "id" : 10,
+    "name" : "Veera",
+    "price" : "150",
+    "image_link":"assets/images/product/keychain1.jpg",
+    "product_type": "HomeDecoration",
+    "description": "Veera keychain.Theme :black"
+  },
+  {
+    "id" : 11,
+    "name" : "Sea-green",
+    "price" : "150",
+    "image_link":"assets/images/product/keychain2.jpg",
+    "product_type": "HomeDecoration",
+    "description": "Customized keychain with sea-green and yellow feathers."
+  },
+  {
+    "id" : 12,
+    "name" : "Multicolored",
+    "price" : "600",
+    "image_link":"assets/images/product/keychain3.jpg",
+    "product_type": "HomeDecoration",
+    "description": "Multicolored keychains.Combo of 5 keychains"
+  },
+  {
+    "id" : 13,
+    "name" : "EvilEye",
+    "price" : "180",
+    "image_link":"assets/images/product/keychain4.jpg",
+    "product_type": "HomeDecoration",
+    "description": "Evil eye keychain."
+  },
+  {
+    "id" : 14,
+    "name" : "ResinLetter",
+    "price" : "200",
+    "image_link":"assets/images/product/keychain5.jpg",
+    "product_type": "HomeDecoration",
+    "description": "Beautiful Keychain with resin letter."
+  }
+]
