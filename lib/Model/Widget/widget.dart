@@ -4,6 +4,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 import 'package:flutter_application_ecommerce/Model/GetX/Controller/duplicate_controller.dart';
 import 'package:flutter_application_ecommerce/Model/GetX/Controller/profile_controller.dart';
 import 'package:flutter_application_ecommerce/Model/Tools/Color/color.dart';
@@ -81,17 +82,17 @@ Widget imageLoading() {
       color: colors.primary, size: 20);
 }
 
-Widget networkImage({required String imageUrl, double? width, double? height}) {
-  return CachedNetworkImage(
-    imageUrl: imageUrl,
-    fit: BoxFit.cover,
-    width: width,
-    height: height,
-    placeholder: (context, url) {
-      return imageLoading();
-    },
-  );
-}
+// Widget networkImage({required String imageUrl, double? width, double? height}) {
+//   return CachedNetworkImage(
+//     imageUrl: imageUrl,
+//     fit: BoxFit.cover,
+//     width: width,
+//     height: height,
+//     placeholder: (context, url) {
+//       return imageLoading();
+//     },
+//   );
+
 
 class HomeProductView extends StatelessWidget {
   const HomeProductView(
@@ -109,7 +110,9 @@ class HomeProductView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
-      valueListenable: profileFunctions.favoriteListenable(),
+      valueListenable: Hive.box<ProductEntity>('favoritebox').listenable(),
+
+      //profileFunctions.favoriteListenable(),
       builder: (context, value, child) {
         return InkWell(
           onTap: () {
@@ -133,10 +136,10 @@ class HomeProductView extends StatelessWidget {
                 const SizedBox(
                   height: 5,
                 ),
-                Text(
-                  product.name.split("Maybelline").last.substring(0, 7),
-                  style: textStyle.bodyNormal,
-                ),
+                // Text(
+                //   product.name.split("Maybelline").last.substring(0, 7),
+                //   style: textStyle.bodyNormal,
+                // ),
                 const SizedBox(
                   height: 5,
                 ),
@@ -248,10 +251,10 @@ class ShopProductView extends StatelessWidget {
             const SizedBox(
               height: 5,
             ),
-            Text(
-              product.name.split("Maybelline").last.substring(0, 7),
-              style: textStyle.bodyNormal.copyWith(color: colors.whiteColor),
-            ),
+            // Text(
+            //   product.name.split("Maybelline").last.substring(0, 7),
+            //   style: textStyle.bodyNormal.copyWith(color: colors.whiteColor),
+            // ),
             const SizedBox(
               height: 5,
             ),

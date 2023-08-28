@@ -1,3 +1,5 @@
+import 'dart:async';
+import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/foundation.dart';
@@ -7,6 +9,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 class ProfileFunctions {
   final String imageStorge = "ImageSotrge";
@@ -49,8 +52,15 @@ class ProfileFunctions {
   }
 
   Future<void> openFavoriteBox() async {
-    await Hive.openBox<ProductEntity>(favoriteBox);
+    bool isOpen = Hive.isBoxOpen(favoriteBox);
+    if (!isOpen) {
+      await Hive.openBox<ProductEntity>(favoriteBox);
+    }
+   // await Hive.openBox<ProductEntity>(favoriteBox);
   }
+
+
+
 
   Future<bool> addToFavorite({required ProductEntity productEntity}) async {
     final box = Hive.box<ProductEntity>(favoriteBox);
@@ -83,9 +93,19 @@ class ProfileFunctions {
     await box.delete(productEntity.id);
     return true;
   }
+  //  favoriteListenable() async {
+  //   await openFavoriteBox();
+  //   final box = Hive.box<ProductEntity>(favoriteBox);
+  //   return box.listenable();
+  //   //return true;
+  // }
 
-  ValueListenable favoriteListenable() {
-    final box = Hive.box<ProductEntity>(favoriteBox);
-    return box.listenable();
-  }
+
+   ValueListenable favoriteListenable() {
+
+     final box = Hive.box<ProductEntity>(favoriteBox);
+     return box.listenable();
+   }
+
+
 }

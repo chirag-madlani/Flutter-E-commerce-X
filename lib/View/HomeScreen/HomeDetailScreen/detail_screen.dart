@@ -25,7 +25,8 @@ class DetailScreen extends StatefulWidget {
 
 class _DetailScreenState extends State<DetailScreen> {
   final double rate = Random.secure().nextInt(5).toDouble();
-  double fullrating=0;
+  //double fullrating=0;
+  double halfrating=0;
   @override
   Widget build(BuildContext context) {
     final duplicateController = Get.find<DuplicateController>();
@@ -197,9 +198,9 @@ class _DetailScreenState extends State<DetailScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               RatingBar.builder(
-                                initialRating: rate,
+                                initialRating: 0,
                                 direction: Axis.horizontal,
-                                maxRating: 5,
+                                minRating: 1,
                                 allowHalfRating: true,
                                 itemBuilder: (context, index) {
                                   return Icon(
@@ -208,26 +209,27 @@ class _DetailScreenState extends State<DetailScreen> {
                                   );
                                 },
                                 onRatingUpdate: (value) {
+                                  setState(() {
+                                    halfrating = value;
+                                  });
                                   Get.dialog(CupertinoAlertDialog(
                                     title: Center(
                                       child: RatingBarIndicator(
                                         itemCount: 5,
-
                                         rating: value,
-                                        itemBuilder: (context, index) {
-                                          return Icon(
-                                            Icons.star,
-                                            color: colors.amber,
-                                          );
+                                         itemBuilder: (context, index) {
+                                           return Icon(
+                                             Icons.star,
+                                             color: colors.amber,
+                                           );
 
-                                           setState(() {
-                                             fullrating= value;
-                                           });
+
                                         },
-                                      ),
+                                       ),
                                     ),
                                     content: Text(
-                                      "Thank you for rating",
+                                      'Rating : $halfrating',
+                                     // "Thank you for rating",
                                       style: textStyle.titleLarge,
                                     ),
                                   ));
@@ -237,7 +239,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                 width: 5,
                               ),
                                Text(
-                                 'Rating:$fullrating',
+                                 'Rating : $halfrating',
                               //  "1.243 Reviews",
                                 style: textStyle.bodyNormal,
                                )
