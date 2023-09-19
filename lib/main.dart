@@ -5,8 +5,15 @@ import 'package:flutter_application_ecommerce/View/RootScreen/root.dart';
 import 'package:flutter_application_ecommerce/View/IntroScreen/intro_screen.dart';
 import 'package:flutter_application_ecommerce/ViewModel/Initial/initial.dart';
 import 'package:get/get.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+
+import 'Model/Tools/JsonParse/product_parse.dart';
 
 void main() async {
+  await Hive.initFlutter();
+  await Hive.openBox<ProductEntity>("FavoriteBox");
+  await Hive.openBox<ProductEntity>("CartBox");
+
   WidgetsFlutterBinding.ensureInitialized();
   await HighPriorityInitial.initial();
   runApp(const MyApp());
