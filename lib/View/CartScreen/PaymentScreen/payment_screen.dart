@@ -1,13 +1,13 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_ecommerce/Model/GetX/Controller/duplicate_controller.dart';
-import 'package:flutter_application_ecommerce/Model/GetX/Controller/profile_controller.dart';
-import 'package:flutter_application_ecommerce/Model/Tools/Color/color.dart';
-import 'package:flutter_application_ecommerce/Model/Tools/Entities/OrderEntity/order_entity.dart';
-import 'package:flutter_application_ecommerce/Model/Tools/JsonParse/product_parse.dart';
-import 'package:flutter_application_ecommerce/Model/Widget/widget.dart';
-import 'package:flutter_application_ecommerce/View/RootScreen/root.dart';
+import 'package:creativity_here/Model/GetX/Controller/duplicate_controller.dart';
+import 'package:creativity_here/Model/GetX/Controller/profile_controller.dart';
+import 'package:creativity_here/Model/Tools/Color/color.dart';
+import 'package:creativity_here/Model/Tools/Entities/OrderEntity/order_entity.dart';
+import 'package:creativity_here/Model/Tools/JsonParse/product_parse.dart';
+import 'package:creativity_here/Model/Widget/widget.dart';
+import 'package:creativity_here/View/RootScreen/root.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
@@ -131,11 +131,11 @@ class PaymentScreen extends StatelessWidget {
                         itemBuilder: (context, index) {
                           return SizedBox(
                             height: 40,
-                            child: CircleAvatar(
-                              backgroundColor: colors.whiteColor,
-                              foregroundImage: CachedNetworkImageProvider(
-                                  productList[index].imageUrl),
-                            ),
+                            child: Image.asset(productList[index].imageUrl)
+                            // CircleAvatar(
+                            //   backgroundColor: colors.whiteColor,
+                            //   foregroundImage: ,
+                            // ),
                           );
                         },
                       ),

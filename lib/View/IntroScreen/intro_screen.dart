@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_application_ecommerce/Model/GetX/Controller/duplicate_controller.dart';
-import 'package:flutter_application_ecommerce/Model/Tools/Color/color.dart';
-import 'package:flutter_application_ecommerce/Model/Tools/Constant/const.dart';
-import 'package:flutter_application_ecommerce/View/RootScreen/root.dart';
-import 'package:flutter_application_ecommerce/ViewModel/Intro/intro.dart';
+import 'package:creativity_here/Model/GetX/Controller/duplicate_controller.dart';
+import 'package:creativity_here/Model/Tools/Color/color.dart';
+import 'package:creativity_here/Model/Tools/Constant/const.dart';
+import 'package:creativity_here/View/RootScreen/root.dart';
+import 'package:creativity_here/ViewModel/Intro/intro.dart';
 import 'package:get/get.dart';
 import 'package:intro_slider/intro_slider.dart';
 

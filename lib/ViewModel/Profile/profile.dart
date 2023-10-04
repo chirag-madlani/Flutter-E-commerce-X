@@ -3,8 +3,8 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/foundation.dart';
-import 'package:flutter_application_ecommerce/Model/GetX/Controller/profile_controller.dart';
-import 'package:flutter_application_ecommerce/Model/Tools/JsonParse/product_parse.dart';
+import 'package:creativity_here/Model/GetX/Controller/profile_controller.dart';
+import 'package:creativity_here/Model/Tools/JsonParse/product_parse.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:hive_flutter/adapters.dart';

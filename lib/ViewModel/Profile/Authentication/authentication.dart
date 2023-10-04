@@ -1,5 +1,5 @@
-import 'package:flutter_application_ecommerce/Model/GetX/Controller/profile_controller.dart';
-import 'package:flutter_application_ecommerce/Model/Tools/Entities/entities.dart';
+import 'package:creativity_here/Model/GetX/Controller/profile_controller.dart';
+import 'package:creativity_here/Model/Tools/Entities/entities.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 

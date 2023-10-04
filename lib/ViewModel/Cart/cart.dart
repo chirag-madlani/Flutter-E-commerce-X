@@ -1,4 +1,4 @@
-import 'package:flutter_application_ecommerce/Model/Tools/JsonParse/product_parse.dart';
+import 'package:creativity_here/Model/Tools/JsonParse/product_parse.dart';
 import 'package:hive_flutter/adapters.dart';
 
 class CartFunctions {

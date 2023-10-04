@@ -1,8 +1,8 @@
-import 'package:flutter_application_ecommerce/Model/Tools/Entities/entities.dart';
-import 'package:flutter_application_ecommerce/ViewModel/Profile/Authentication/authentication.dart';
-import 'package:flutter_application_ecommerce/ViewModel/Profile/address.dart';
-import 'package:flutter_application_ecommerce/ViewModel/Profile/order.dart';
-import 'package:flutter_application_ecommerce/ViewModel/Profile/profile.dart';
+import 'package:creativity_here/Model/Tools/Entities/entities.dart';
+import 'package:creativity_here/ViewModel/Profile/Authentication/authentication.dart';
+import 'package:creativity_here/ViewModel/Profile/address.dart';
+import 'package:creativity_here/ViewModel/Profile/order.dart';
+import 'package:creativity_here/ViewModel/Profile/profile.dart';
 import 'package:get/get.dart';
 
 class ProfileController extends GetxController {

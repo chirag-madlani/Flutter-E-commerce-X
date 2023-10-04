@@ -1,11 +1,11 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter_application_ecommerce/Model/Tools/Color/color.dart';
-import 'package:flutter_application_ecommerce/Model/Tools/Entities/entities.dart';
-import 'package:flutter_application_ecommerce/Model/Tools/Font/font.dart';
-import 'package:flutter_application_ecommerce/Model/Tools/JsonParse/product_parse.dart';
-import 'package:flutter_application_ecommerce/ViewModel/Cart/cart.dart';
-import 'package:flutter_application_ecommerce/ViewModel/Cart/payment.dart';
-import 'package:flutter_application_ecommerce/ViewModel/Intro/intro.dart';
+import 'package:creativity_here/Model/Tools/Color/color.dart';
+import 'package:creativity_here/Model/Tools/Entities/entities.dart';
+import 'package:creativity_here/Model/Tools/Font/font.dart';
+import 'package:creativity_here/Model/Tools/JsonParse/product_parse.dart';
+import 'package:creativity_here/ViewModel/Cart/cart.dart';
+import 'package:creativity_here/ViewModel/Cart/payment.dart';
+import 'package:creativity_here/ViewModel/Intro/intro.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 

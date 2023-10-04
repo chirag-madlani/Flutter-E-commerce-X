@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_ecommerce/Model/GetX/Controller/duplicate_controller.dart';
-import 'package:flutter_application_ecommerce/Model/GetX/Controller/profile_controller.dart';
-import 'package:flutter_application_ecommerce/Model/Tools/Entities/entities.dart';
-import 'package:flutter_application_ecommerce/ViewModel/Profile/Authentication/authentication.dart';
+import 'package:creativity_here/Model/GetX/Controller/duplicate_controller.dart';
+import 'package:creativity_here/Model/GetX/Controller/profile_controller.dart';
+import 'package:creativity_here/Model/Tools/Entities/entities.dart';
+import 'package:creativity_here/ViewModel/Profile/Authentication/authentication.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 

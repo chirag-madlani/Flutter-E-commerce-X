@@ -1,4 +1,4 @@
-package com.EcommerceX.app
+package com.creativityHere.app
 
 import io.flutter.embedding.android.FlutterActivity
 

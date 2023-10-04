@@ -1,4 +1,4 @@
-import 'package:flutter_application_ecommerce/Model/Tools/Entities/OrderEntity/order_entity.dart';
+import 'package:creativity_here/Model/Tools/Entities/OrderEntity/order_entity.dart';
 import 'package:hive/hive.dart';
 
 class OrderFunctions {

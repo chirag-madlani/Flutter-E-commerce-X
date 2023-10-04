@@ -1,6 +1,6 @@
-import 'package:flutter_application_ecommerce/Model/GetX/Controller/duplicate_controller.dart';
-import 'package:flutter_application_ecommerce/Model/GetX/Controller/home_controller.dart';
-import 'package:flutter_application_ecommerce/Model/GetX/Controller/profile_controller.dart';
+import 'package:creativity_here/Model/GetX/Controller/duplicate_controller.dart';
+import 'package:creativity_here/Model/GetX/Controller/home_controller.dart';
+import 'package:creativity_here/Model/GetX/Controller/profile_controller.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:hive_flutter/adapters.dart';

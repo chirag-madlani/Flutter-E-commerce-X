@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_ecommerce/Model/GetX/Controller/duplicate_controller.dart';
-import 'package:flutter_application_ecommerce/Model/Tools/JsonParse/product_parse.dart';
-import 'package:flutter_application_ecommerce/Model/Widget/widget.dart';
+import 'package:creativity_here/Model/GetX/Controller/duplicate_controller.dart';
+import 'package:creativity_here/Model/Tools/JsonParse/product_parse.dart';
+import 'package:creativity_here/Model/Widget/widget.dart';
 import 'package:get/get.dart';
 
 class ShopScreen extends StatelessWidget {

@@ -1,11 +1,11 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_ecommerce/Model/GetX/Controller/duplicate_controller.dart';
-import 'package:flutter_application_ecommerce/Model/Tools/Constant/const.dart';
-import 'package:flutter_application_ecommerce/Model/Widget/widget.dart';
-import 'package:flutter_application_ecommerce/View/CartScreen/CheckoutScreen/check_screen.dart';
-import 'package:flutter_application_ecommerce/View/CartScreen/bloc/cart_bloc.dart';
+import 'package:creativity_here/Model/GetX/Controller/duplicate_controller.dart';
+import 'package:creativity_here/Model/Tools/Constant/const.dart';
+import 'package:creativity_here/Model/Widget/widget.dart';
+import 'package:creativity_here/View/CartScreen/CheckoutScreen/check_screen.dart';
+import 'package:creativity_here/View/CartScreen/bloc/cart_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 

@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_application_ecommerce/Model/Tools/Color/color.dart';
+import 'package:creativity_here/Model/Tools/Color/color.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomTextStyle {

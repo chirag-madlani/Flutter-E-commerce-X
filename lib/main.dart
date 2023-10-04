@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_ecommerce/Model/GetX/Binding/initial_binding.dart';
-import 'package:flutter_application_ecommerce/Model/GetX/Controller/duplicate_controller.dart';
-import 'package:flutter_application_ecommerce/View/RootScreen/root.dart';
-import 'package:flutter_application_ecommerce/View/IntroScreen/intro_screen.dart';
-import 'package:flutter_application_ecommerce/ViewModel/Initial/initial.dart';
+import 'package:creativity_here/Model/GetX/Binding/initial_binding.dart';
+import 'package:creativity_here/Model/GetX/Controller/duplicate_controller.dart';
+import 'package:creativity_here/View/RootScreen/root.dart';
+import 'package:creativity_here/View/IntroScreen/intro_screen.dart';
+import 'package:creativity_here/ViewModel/Initial/initial.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 

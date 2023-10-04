@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_ecommerce/Model/GetX/Controller/duplicate_controller.dart';
-import 'package:flutter_application_ecommerce/Model/GetX/Controller/profile_controller.dart';
-import 'package:flutter_application_ecommerce/Model/Tools/Color/color.dart';
-import 'package:flutter_application_ecommerce/Model/Tools/Entities/AddressEntity/address_entity.dart';
-import 'package:flutter_application_ecommerce/Model/Tools/Entities/entities.dart';
-import 'package:flutter_application_ecommerce/Model/Tools/Font/font.dart';
+import 'package:creativity_here/Model/GetX/Controller/duplicate_controller.dart';
+import 'package:creativity_here/Model/GetX/Controller/profile_controller.dart';
+import 'package:creativity_here/Model/Tools/Color/color.dart';
+import 'package:creativity_here/Model/Tools/Entities/AddressEntity/address_entity.dart';
+import 'package:creativity_here/Model/Tools/Entities/entities.dart';
+import 'package:creativity_here/Model/Tools/Font/font.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 

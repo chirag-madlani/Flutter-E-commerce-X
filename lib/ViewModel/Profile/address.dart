@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_ecommerce/Model/Tools/Entities/AddressEntity/address_entity.dart';
-import 'package:flutter_application_ecommerce/Model/Tools/Font/font.dart';
+import 'package:creativity_here/Model/Tools/Entities/AddressEntity/address_entity.dart';
+import 'package:creativity_here/Model/Tools/Font/font.dart';
 import 'package:hive_flutter/adapters.dart';
 
 class AddressFunctions {

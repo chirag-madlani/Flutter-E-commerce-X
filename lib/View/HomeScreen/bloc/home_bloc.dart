@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_ecommerce/Model/Tools/JsonParse/product_parse.dart';
-import 'package:flutter_application_ecommerce/ViewModel/Home/HomeRepository/home_repo.dart';
+import 'package:creativity_here/Model/Tools/JsonParse/product_parse.dart';
+import 'package:creativity_here/ViewModel/Home/HomeRepository/home_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'home_event.dart';
